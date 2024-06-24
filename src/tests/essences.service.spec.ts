@@ -5,7 +5,7 @@ import { Cache } from 'cache-manager';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
 import { of, throwError } from 'rxjs';
 import { AxiosResponse } from 'axios';
-import { HttpException } from '@nestjs/common';
+import {HttpException, HttpStatus} from '@nestjs/common';
 import { EssencesService } from "../essences/essences.service";
 
 describe('EssencesService', () => {
@@ -83,6 +83,21 @@ describe('EssencesService', () => {
                 headers: { Authorization: 'Basic dXNlcjpwYXNzd29yZA==' },
             });
             expect(cacheManager.set).toHaveBeenCalledWith('essences-list', apiData.data, { ttl: 1800 });
+        });
+
+        it('should throw a NOT_FOUND exception if essence is not found in API', async () => {
+            jest.spyOn(cacheManager, 'get').mockResolvedValueOnce(null);
+            jest.spyOn(httpService, 'get').mockReturnValueOnce(throwError({
+                response: { status: 404 },
+            }));
+
+            await expect(service.getEssenceDetail('999')).rejects.toThrow(new HttpException('Essência não encontrada', HttpStatus.NOT_FOUND));
+            expect(cacheManager.get).toHaveBeenCalledWith('essence-detail-999');
+            expect(httpService.get).toHaveBeenCalledWith(
+                'https://api.dev.grupoboticario.com.br/v1/essences-challenge/essences/999',
+                { headers: { Authorization: 'Basic dXNlcjpwYXNzd29yZA==' } },
+            );
+            expect(cacheManager.set).not.toHaveBeenCalled();
         });
 
         it('should throw an HttpException if API call fails', async () => {
