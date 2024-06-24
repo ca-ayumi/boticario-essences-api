@@ -1,6 +1,5 @@
 <h1 align="center">🧴 boticario-essences-api </h1>
-
-![Diagrama Componente.drawio.png](Diagrams%2FDiagrama%20Componente.drawio.png)
+![Diagrama Componente drawio](https://github.com/ca-ayumi/boticario-essences-api/assets/72809027/97cfae4e-f21a-42f0-9040-a6f1e713ae8f)
 
 ## Descrição
 
