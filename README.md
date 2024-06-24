@@ -1,5 +1,7 @@
 <h1 align="center">🧴 boticario-essences-api </h1>
 
+![Diagrama Componente.drawio.png](Diagrams%2FDiagrama%20Componente.drawio.png)
+
 ## Descrição
 
 Uma API Gateway para acessar dados das essências do Grupo Boticário, implementando políticas de controle de acesso volumétrico, cache e autenticação avançada com JWT.
@@ -42,6 +44,7 @@ $ pnpm run test:cov
 ## 🗒️ Documentação
 
 - [Boticario Test Case Docs](https://www.notion.so/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9?pvs=4)
+- [Swagger](http://localhost:3000/api#/)
 
 ## 📌 Tecnologias
 

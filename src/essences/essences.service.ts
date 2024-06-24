@@ -68,6 +68,10 @@ export class EssencesService {
                     headers: { Authorization: this.API_AUTH },
                 }).pipe(
                     catchError(err => {
+                        if (err.response && err.response.status === 404) {
+                            this.logger.error(`Essência com ID ${id} não encontrada`);
+                            throw new HttpException('Essência não encontrada', HttpStatus.NOT_FOUND);
+                        }
                         this.logger.error(`Erro ao buscar detalhes da API: ${err.message}`);
                         throw new HttpException('Erro ao buscar detalhes da API', HttpStatus.BAD_GATEWAY);
                     }),
@@ -77,6 +81,9 @@ export class EssencesService {
             await this.cacheManager.set(cacheKey, response.data, { ttl: 1800 });
             return response.data;
         } catch (error) {
+            if (error instanceof HttpException) {
+                throw error;
+            }
             this.logger.error(`Erro ao processar solicitação: ${error.message}`);
             throw new HttpException('Erro ao processar solicitação', HttpStatus.INTERNAL_SERVER_ERROR);
         }
