@@ -1,5 +1,5 @@
 <h1 align="center">🧴 boticario-essences-api </h1>
-<img src="https://github.com/ca-ayumi/boticario-essences-api/assets/72809027/97cfae4e-f21a-42f0-9040-a6f1e713ae8f" alt="Diagrama Componente">
+<img src="https://github.com/ca-ayumi/boticario-essences-api/assets/72809027/97cfae4e-f21a-42f0-9040-a6f1e713ae8f" alt="Diagrama Componente" lign="center">
 
 ## Descrição
 
@@ -42,7 +42,7 @@ $ pnpm run test:cov
 
 ## 🗒️ Documentação
 
-- [Boticario Test Case Docs](https://www.notion.so/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9?pvs=4)
+- [Boticario Test Case Docs]([https://www.notion.so/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9?pvs=4](https://likeable-thread-8af.notion.site/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9))
 - [Swagger](http://localhost:3000/api#/)
 
 ## 📌 Tecnologias
