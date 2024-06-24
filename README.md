@@ -41,7 +41,7 @@ $ pnpm run test:cov
 
 ## 🗒️ Documentação
 
-- https://tech-hub.raizen.com/catalog/default/api/raizen-power-ops-api-data-process/definition#/
+- https://www.notion.so/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9?pvs=4
 
 ## 📌 Tecnologias
 
