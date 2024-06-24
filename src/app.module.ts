@@ -13,8 +13,8 @@ import {AuthModule} from "./auth/auth.module";
     }),
     CacheModule.register({
       isGlobal: true,
-      ttl: 1800, // tempo de vida do cache em segundos
-      max: 100,  // máximo de itens no cache
+      ttl: 1800,
+      max: 100,
     }),
     ThrottlerModule.forRoot({
       ttl: 60,

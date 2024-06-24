@@ -3,7 +3,6 @@ import { HttpModule } from '@nestjs/axios';
 import { ConfigModule } from '@nestjs/config';
 import {EssencesService} from "./essences.service";
 import {EssencesController} from "./essences.controller";
-import {CacheModule} from "@nestjs/cache-manager";
 
 @Module({
   imports: [
