@@ -42,7 +42,7 @@ $ pnpm run test:cov
 
 ## 🗒️ Documentação
 
-- [Boticario Test Case Docs]([https://www.notion.so/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9?pvs=4](https://likeable-thread-8af.notion.site/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9))
+- [Boticario Test Case Docs](https://likeable-thread-8af.notion.site/O-BOTIC-RIO-Test-Case-0cd6be17745d415690775126903508f9)
 - [Swagger](http://localhost:3000/api#/)
 
 ## 📌 Tecnologias
